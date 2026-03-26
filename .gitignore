@@ -1,0 +1,27 @@
+# Arquivos compilados (Java)
+*.class
+
+# Pastas de build/compilação
+/bin/
+/build/
+/dist/
+/target/
+
+# Arquivos e pastas do NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+.nb-gradle/
+
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos do Eclipse
+.classpath
+.project
+.settings/
+
+# Arquivos do sistema operacional (Opcional, mas recomendado)
+.DS_Store
+Thumbs.db
