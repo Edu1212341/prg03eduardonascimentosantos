@@ -43,9 +43,8 @@
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="lblCrescimentoIdade" min="-2" pref="256" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -79,7 +78,7 @@
     <Component class="javax.swing.JButton" name="btnCalcular">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/ifba/atividade03/images/calcular.png"/>
+          <Image iconType="2" name="/home/eduardo/Documentos/GitHub/prg03eduardonascimentosantos/prg03eduardonascimentosantos/src/main/java/images/calcular.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="CALCULAR IDADE"/>
       </Properties>
@@ -102,7 +101,7 @@
     <Component class="javax.swing.JLabel" name="lblCrescimentoIdade">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/ifba/atividade03/images/grupo-de-idade.png"/>
+          <Image iconType="2" name="/home/eduardo/Documentos/GitHub/prg03eduardonascimentosantos/prg03eduardonascimentosantos/src/main/java/images/grupo-de-idade.png"/>
         </Property>
       </Properties>
     </Component>
