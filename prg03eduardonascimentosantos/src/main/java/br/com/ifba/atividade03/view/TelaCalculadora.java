@@ -4,6 +4,9 @@
  */
 package br.com.ifba.atividade03.view;
 
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
+
 /**
  *
  * @author eduardo
@@ -33,17 +36,21 @@ public class TelaCalculadora extends javax.swing.JFrame {
         txtAnoNascimento = new javax.swing.JTextField();
         lblTextoResposta = new javax.swing.JLabel();
         lblIdade = new javax.swing.JLabel();
+        lblCrescimentoIdade = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblPrincipal.setText("Escreva o ano que você nasceu:");
 
+        btnCalcular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade03/images/calcular.png"))); // NOI18N
         btnCalcular.setText("CALCULAR IDADE");
         btnCalcular.addActionListener(this::btnCalcularActionPerformed);
 
         txtAnoNascimento.addActionListener(this::txtAnoNascimentoActionPerformed);
 
         lblTextoResposta.setText("Aqui está sua idade:");
+
+        lblCrescimentoIdade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade03/images/grupo-de-idade.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,29 +64,32 @@ public class TelaCalculadora extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(lblIdade))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtAnoNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtAnoNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addComponent(lblCrescimentoIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtAnoNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
+                .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTextoResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblIdade))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(lblCrescimentoIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -90,7 +100,17 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAnoNascimentoActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
-        // TODO add your handling code here:
+
+        int anoNascimento = Integer.parseInt(txtAnoNascimento.getText());
+        
+        
+        if (anoNascimento > 2026 || anoNascimento < 1909){
+            JOptionPane.showMessageDialog(this, "Idade Impossivel, tente novamente","DEU RUIM", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            int Idade = 2026 - anoNascimento;
+            lblIdade.setText(Integer.toString(Idade));
+        }
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**
@@ -120,6 +140,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcular;
+    private javax.swing.JLabel lblCrescimentoIdade;
     private javax.swing.JLabel lblIdade;
     private javax.swing.JLabel lblPrincipal;
     private javax.swing.JLabel lblTextoResposta;

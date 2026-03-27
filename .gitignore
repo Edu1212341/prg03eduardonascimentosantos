@@ -25,3 +25,4 @@
 # Arquivos do sistema operacional (Opcional, mas recomendado)
 .DS_Store
 Thumbs.db
+/prg03eduardonascimentosantos/target/
