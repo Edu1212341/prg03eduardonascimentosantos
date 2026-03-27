@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package br.com.ifba.atividade03.view;
 
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
@@ -42,7 +42,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
         lblPrincipal.setText("Escreva o ano que você nasceu:");
 
-        btnCalcular.setIcon(new javax.swing.ImageIcon("/home/eduardo/Documentos/GitHub/prg03eduardonascimentosantos/prg03eduardonascimentosantos/src/main/java/images/calcular.png")); // NOI18N
+        btnCalcular.setIcon(new javax.swing.ImageIcon("/home/eduardo/Documentos/GitHub/prg03eduardonascimentosantos/prg03eduardonascimentosantos/src/main/java/br/com/ifba/atividade03/images/calcular.png")); // NOI18N
         btnCalcular.setText("CALCULAR IDADE");
         btnCalcular.addActionListener(this::btnCalcularActionPerformed);
 
@@ -50,7 +50,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
         lblTextoResposta.setText("Aqui está sua idade:");
 
-        lblCrescimentoIdade.setIcon(new javax.swing.ImageIcon("/home/eduardo/Documentos/GitHub/prg03eduardonascimentosantos/prg03eduardonascimentosantos/src/main/java/images/grupo-de-idade.png")); // NOI18N
+        lblCrescimentoIdade.setIcon(new javax.swing.ImageIcon("/home/eduardo/Documentos/GitHub/prg03eduardonascimentosantos/prg03eduardonascimentosantos/src/main/java/br/com/ifba/atividade03/images/grupo-de-idade.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
