@@ -20,6 +20,7 @@ public class TelaAdivinhador extends javax.swing.JFrame {
      */
     public TelaAdivinhador() {
         initComponents();
+        lblTextoA.setText("<html>Escolha um numero <br> de 1 a 5</html>");
     }
 
     /**
@@ -32,9 +33,8 @@ public class TelaAdivinhador extends javax.swing.JFrame {
     private void initComponents() {
 
         lblAkinatorImage = new javax.swing.JLabel();
-        lblBalaoDeFala = new javax.swing.JLabel();
         lblTextoA = new javax.swing.JLabel();
-        lblTextoB = new javax.swing.JLabel();
+        lblBalaoDeFala = new javax.swing.JLabel();
         btnPalpite = new javax.swing.JButton();
         txtNumeroRecebido = new javax.swing.JSpinner();
 
@@ -44,14 +44,12 @@ public class TelaAdivinhador extends javax.swing.JFrame {
         lblAkinatorImage.setIcon(new javax.swing.ImageIcon("/home/eduardo/Documentos/GitHub/prg03eduardonascimentosantos/prg03eduardonascimentosantos/src/main/java/br/com/ifba/atividade04/images/kindpng_4647402.png")); // NOI18N
         getContentPane().add(lblAkinatorImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
+        lblTextoA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTextoA.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        getContentPane().add(lblTextoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 140, 70));
+
         lblBalaoDeFala.setIcon(new javax.swing.ImageIcon("/home/eduardo/Documentos/GitHub/prg03eduardonascimentosantos/prg03eduardonascimentosantos/src/main/java/br/com/ifba/atividade04/images/balao-de-fala.png")); // NOI18N
-        getContentPane().add(lblBalaoDeFala, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, -1, 142));
-
-        lblTextoA.setText("Escolha um numero");
-        getContentPane().add(lblTextoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, 60));
-
-        lblTextoB.setText("de 1 a 5");
-        getContentPane().add(lblTextoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, -1, -1));
+        getContentPane().add(lblBalaoDeFala, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, 142));
 
         btnPalpite.setText("Palpite");
         btnPalpite.addActionListener(this::btnPalpiteActionPerformed);
@@ -73,10 +71,8 @@ public class TelaAdivinhador extends javax.swing.JFrame {
         
             if (valorRecebido == aleatorio){
                 lblTextoA.setText("Parabéns, você acertou");
-                lblTextoB.setText(" ");
             }else{
             lblTextoA.setText("Este não é o valor correto");
-            lblTextoB.setText(" ");
             }
         
     }//GEN-LAST:event_btnPalpiteActionPerformed
@@ -111,7 +107,6 @@ public class TelaAdivinhador extends javax.swing.JFrame {
     private javax.swing.JLabel lblAkinatorImage;
     private javax.swing.JLabel lblBalaoDeFala;
     private javax.swing.JLabel lblTextoA;
-    private javax.swing.JLabel lblTextoB;
     private javax.swing.JSpinner txtNumeroRecebido;
     // End of variables declaration//GEN-END:variables
 }
