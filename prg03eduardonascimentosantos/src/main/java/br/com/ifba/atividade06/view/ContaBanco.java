@@ -14,7 +14,12 @@ public class ContaBanco {
     private String dono;
     private double saldo;
     private boolean status;
-
+    
+    
+    public ContaBanco() {
+        this.saldo = 0.0;
+        this.status = false; 
+    }
     
     public int getNumConta() {
         return numConta;
@@ -28,7 +33,7 @@ public class ContaBanco {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(String tipo) {//se escrever outra coisa que nã
         if (!"cc".equals(tipo) && !"cp".equals(tipo)){ //A IDE me indicou que usasse Equals!!!
             System.out.println("Este tipo de conta é invalido ou nao existe ");
         }else {
@@ -60,23 +65,26 @@ public class ContaBanco {
         this.status = status;
     }
     
-    public void abrirConta(int numConta, String tipo, String dono){
-        this.setNumConta(numConta);
+    public void abrirConta(int numConta, String tipo, String dono){   
         this.setTipo(tipo);
-        this.setDono(dono);
-        setStatus(true);
-        // Voce mencionou que devemos usar metodos getters e setters, eu ia fazer "this.numConta =numConta" mas me pareceu mais profissional fazer assim.
         
-        if (tipo.equals("cc")){
+        if (this.tipo != null){//se a variavel tipo não tiver nem cp nem cc vai permanecer null, ai ní
+            this.setNumConta(numConta);
+            this.setDono(dono);
+            setStatus(true);
+            // Voce mencionou que devemos usar metodos getters e setters, eu ia fazer "this.numConta =numConta" mas me pareceu mais profissional fazer assim.
+        
+            if (tipo.equals("cc")){
             setSaldo(50.0);
-        }
-        if(tipo.equals("cp")){// nesses if's não precisa de this.
+            }
+            if(tipo.equals("cp")){// nesses if's não precisa de this.
             setSaldo(150.0);
+            }
         }
     }
 
     public void fecharConta(){
-        if (status == true){
+        if (status == true){//a conta tem que existir e o saldo tem que estar zerado
             if (saldo != 0){
                 System.out.println("O saldo precisa estar zerado para que a conta seja desativada");
             }else{
@@ -86,7 +94,7 @@ public class ContaBanco {
     }
 
     public void depositar(double valor){
-        if(status == true){
+        if(status == true){//a conta tem que existir e não da de por valor negativo ou 0
             if ( valor > 0 ){
                 setSaldo(saldo + valor);
             }else{
@@ -110,4 +118,24 @@ public class ContaBanco {
             
     }
     
+    public void pagarMensalidade (){
+        if(status == true){
+            if(tipo.equals("cc")){
+                if(getSaldo() < 12){//Muda o valor das mensalidades dependendo de cc ou cp
+                    System.out.println("Infelizmente nao ha saldo suficiente");
+                }else{
+                    setSaldo(saldo - 12);
+                }
+            }
+            if(tipo.equals("cp")){
+                if(getSaldo() < 20){
+                    System.out.println("Infelizmente nao ha saldo suficiente");
+                }else{
+                    setSaldo(saldo-20);
+                }
+            }
+        }else{
+            System.out.println("Essa conta esta desativada");
+        }
+    }
 }
