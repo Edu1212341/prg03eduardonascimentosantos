@@ -87,7 +87,7 @@ public class TelaFatorial extends javax.swing.JFrame {
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
         Fatorial fatorial = new Fatorial();
-        int valor = Integer.parseInt(spnSeletorDeNumero.getValue().toString());
+        int valor = Integer.parseInt(spnSeletorDeNumero.getValue().toString());//Pegando o numero do spinner e pondo no valor.
         fatorial.setValor(valor);
         
         lblFormula.setText(fatorial.getFormula());

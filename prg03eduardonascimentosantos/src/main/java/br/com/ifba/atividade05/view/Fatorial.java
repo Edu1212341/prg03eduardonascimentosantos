@@ -10,7 +10,7 @@ package br.com.ifba.atividade05.view;
  */
 public class Fatorial {
     private int valor; 
-    private int fatorial;//Como usei INT os calculos nao podem ir tao longe
+    private int fatorial; //Como usei INT os calculos nao podem ir tao longe
     private String formula = "";
 
 
@@ -20,10 +20,10 @@ public class Fatorial {
         formula = " ";
         
         for (int i = valor; i > 1; i--){//Loop for simples
-            fat *= i;
-            formula += i + " x ";// As strings (formula) vão se juntando atã
+            fat *= i;//resultado do fatorial aqui
+            formula += i + " x ";// As strings (formula) vão se juntando até antes do numero 1.
         }
-        formula += " 1 = " ;
+        formula += " 1 = " ;//aqui fechamos com o 1 =.
         fatorial = fat;
     }
 

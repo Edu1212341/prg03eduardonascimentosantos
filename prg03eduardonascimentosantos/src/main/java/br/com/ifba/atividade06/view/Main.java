@@ -77,7 +77,7 @@ public class Main {
                     break;
 
                 case 6:
-                    System.out.println("Dono: " + minhaConta.getDono());
+                    System.out.println("Dono: " + minhaConta.getDono());  //Dava de ter feito um "toString" pra isso tudo ãaqui mas nao tive tempo
                     System.out.println("Número: " + minhaConta.getNumConta());
                     System.out.println("Tipo: " + minhaConta.getTipo());
                     System.out.println("Saldo: " + minhaConta.getSaldo());
