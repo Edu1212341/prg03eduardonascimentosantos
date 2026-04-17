@@ -41,7 +41,6 @@ public class Telinha extends javax.swing.JFrame {
 
         lblTextinho.setText("Valor da Compra R$:");
 
-        txtCompraValor.setText("jTextField1");
         txtCompraValor.addActionListener(this::txtCompraValorActionPerformed);
 
         lblTipoPagamento.setText("Tipo de Pagamento: ");
