@@ -41,6 +41,7 @@ public class Telinha extends javax.swing.JFrame {
 
         lblTextinho.setText("Valor da Compra R$:");
 
+        txtCompraValor.setText("             ");
         txtCompraValor.addActionListener(this::txtCompraValorActionPerformed);
 
         lblTipoPagamento.setText("Tipo de Pagamento: ");
@@ -55,14 +56,15 @@ public class Telinha extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblTipoPagamento)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cmbCaixaSelecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblTextinho)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtCompraValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblTextinho)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txtCompraValor))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblTipoPagamento)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(cmbCaixaSelecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -93,7 +95,7 @@ public class Telinha extends javax.swing.JFrame {
         Pagamento compra = null;//variavel somente existindo;
 
         
-        switch (tipo) {//Switch case para o tipo de pagamento.
+        switch (tipo) {//Switch case para o tipo de pagamento. Segundo meus estudos to seguindo bem ôo polimorfismo
             case "Dinheiro":
                 compra = new PagamentoDinheiro(valor);
             break;
