@@ -8,6 +8,25 @@ package br.com.ifba.atividade09.view;
  *
  * @author eduardo
  */
-public class Cubo {
+public class Cubo extends Forma3D{
+    private double linha;
+
+    public Cubo(double linha) {
+        this.linha = linha;
+    }
+
+    @Override
+    public double obterArea() {
+        return 6 * Math.pow(linha, 2);
+    }
+
+    @Override
+    public double obterVolume() {
+        return Math.pow(linha, 3);
+    }
+    
+    public String toString(){
+        return "Aresta:  " + linha + "  Area: " + this.obterArea() + "  Volume:  " + this.obterVolume();
+    }
     
 }

@@ -22,6 +22,6 @@ public class Circulo extends Forma2D{
     
     @Override
     public String toString (){
-        return "Area do circulo" + this.obterArea() + "Raio do circulo: " + raio;
+        return "Area do circulo: " + this.obterArea() + "  Raio do circulo: " + raio;
     }
 }

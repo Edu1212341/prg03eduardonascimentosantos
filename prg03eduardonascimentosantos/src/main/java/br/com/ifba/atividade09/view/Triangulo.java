@@ -24,7 +24,7 @@ public class Triangulo extends Forma2D {//Eu pensei em fazer um triangulo abstra
     
    @Override
     public String toString(){
-        return "Area do triangulo: " + this.obterArea() + "Base e altura do triangulo" + base + "  , " + altura;
+        return "Area do triangulo: " + this.obterArea() + "  Base e altura do triangulo:  " + base + "  , " + altura;
     }
    
    

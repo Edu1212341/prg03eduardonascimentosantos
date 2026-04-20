@@ -22,7 +22,7 @@ public class Quadrado extends Forma2D{
     
     @Override
     public String toString(){
-        return "Area do quadrado: "+ this.obterArea() + "Lado do quadrado: " + lado;
+        return "Area do quadrado:  "+ this.obterArea() + "  Lado do quadrado: " + lado;
     }
     
 }
