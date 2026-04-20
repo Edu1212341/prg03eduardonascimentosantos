@@ -8,7 +8,7 @@ package br.com.ifba.atividade09.view;
  *
  * @author eduardo
  */
-public abstract class Forrma3D extends Forma{
-    public abstract double obsterArea();
+public abstract class Forma3D extends Forma{
+    public abstract double obterArea();
     public abstract double obterVolume();
 }
