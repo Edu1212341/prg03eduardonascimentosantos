@@ -8,7 +8,7 @@ package br.com.ifba.atividade09.view;
  *
  * @author eduardo
  */
-public class Circulo extends Forma2D{
+public class Circulo extends Forma2D{//so precisa do raio para os calculos do circulo, da esfera tamb
     private double raio;
 
     public Circulo(double raio) {

@@ -23,7 +23,7 @@ public class Main {
         formas.add(new Triangulo(8.0, 5.0));
         
         
-        for(Forma formaLida: formas){
+        for(Forma formaLida: formas){//for aprimorado para percorrer e citar o toString de cada um
             System.out.println(formaLida.toString());
         }
     }

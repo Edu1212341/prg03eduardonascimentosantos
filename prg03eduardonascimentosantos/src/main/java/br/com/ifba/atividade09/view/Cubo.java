@@ -8,7 +8,7 @@ package br.com.ifba.atividade09.view;
  *
  * @author eduardo
  */
-public class Cubo extends Forma3D{
+public class Cubo extends Forma3D{//cada forma tem suas variaveis especificas
     private double linha;
 
     public Cubo(double linha) {

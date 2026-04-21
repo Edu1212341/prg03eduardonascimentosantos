@@ -8,7 +8,7 @@ package br.com.ifba.atividade09.view;
  *
  * @author eduardo
  */
-public class Piramide extends Forma3D{
+public class Piramide extends Forma3D{//o programa n
     private double areaBase;
     private double areaLateral;
     private double altura;

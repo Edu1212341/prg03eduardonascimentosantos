@@ -8,6 +8,6 @@ package br.com.ifba.atividade09.view;
  *
  * @author eduardo
  */
-public abstract class Forma2D extends Forma{
+public abstract class Forma2D extends Forma{//classe de forma 2d
     public abstract double obterArea();
 }
